@@ -5,6 +5,7 @@ import { getSearchedImagesApi } from '../../services/imagesApi';
 import Button from 'components/Button/Button';
 import { Modal } from 'components/Modal/Modal';
 import { Gallery } from './ImageGallery.styled';
+import { LoaderWrapper } from 'components/Loader/Loader.styled';
 
 class ImageGallery extends Component {
   state = {
@@ -81,9 +82,17 @@ class ImageGallery extends Component {
     const { images, error } = this.state;
     return (
       <>
-        {this.state.isLoading && <Loader />}
         {error ? (
-          <h2>{error}</h2>
+          <h2
+            style={{
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              fontSize: '32px',
+              color: 'white',
+            }}
+          >
+            {error}
+          </h2>
         ) : (
           <>
             <Gallery>
@@ -100,6 +109,11 @@ class ImageGallery extends Component {
                 ></Modal>
               )}
             </Gallery>
+            {this.state.isLoading && (
+              <LoaderWrapper>
+                <Loader />
+              </LoaderWrapper>
+            )}
             {images.length > 0 && <Button onClick={this.changePage} />}
           </>
         )}

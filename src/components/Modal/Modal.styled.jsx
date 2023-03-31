@@ -10,18 +10,19 @@ export const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
 `;
 
 export const ModalContent = styled.div`
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: calc(100vw - 48px);
-  max-height: calc(100vh - 24px);
-  /* width: 100%; */
-  padding: 20px;
-  background: rgba(107, 107, 107, 0.7);
+  transform: translate(-50%, -50%); */
+  /* max-width: calc(100vw - 38px);
+  max-height: calc(100vh - 14px); */
+  /* max-width: 100%; */
+  padding: 10px;
+  background: rgba(47, 109, 145, 0.7);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
@@ -30,5 +31,5 @@ export const ModalContent = styled.div`
 `;
 
 export const ModalImage = styled.img`
-	
-`
+  width: 100%;
+`;

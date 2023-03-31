@@ -34,5 +34,6 @@ export default ImageGalleryItem;
 
 ImageGalleryItem.propTypes = {
   images: PropTypes.arrayOf(PropTypes.object).isRequired,
-  omClickImg: PropTypes.func,
+  showModal: PropTypes.func.isRequired,
+  showLargeImg: PropTypes.func.isRequired,
 };

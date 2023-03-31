@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Header, Form, BtnSubmit, BtnText, Input } from './Searchbar.styled';
+import Icon from '../../images/glass.png';
 
 class Searchbar extends Component {
   state = {
@@ -16,6 +17,7 @@ class Searchbar extends Component {
       <Header>
         <Form onSubmit={this.handleSubmit}>
           <BtnSubmit type="submit">
+            <img src={Icon} alt="search" />
             <BtnText>Search</BtnText>
           </BtnSubmit>
 
