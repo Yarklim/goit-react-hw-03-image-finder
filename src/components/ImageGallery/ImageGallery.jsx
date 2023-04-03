@@ -27,7 +27,7 @@ class ImageGallery extends Component {
     return null;
   }
 
-  async componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
     const { images, page, query } = this.state;
 
     if (
